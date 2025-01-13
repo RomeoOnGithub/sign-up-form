@@ -1,0 +1,63 @@
+/* page structure */
+body {
+    display: flex;
+    height: 100vh;
+}
+
+/* page layout */
+#left-column {
+    display: flex;
+    flex: 1;
+}
+#right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+#top-row, #mid-row, #bottom-row {
+    flex: 1;
+}
+
+/* text structure */
+#top-row {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+/* inputs structure */
+.form-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-input {
+    flex: 1 1 45%;
+}
+form {
+    display: flex;
+}
+fieldset {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+label {
+    display: block;
+}
+div {
+    flex: 0 0 33.33%;
+}
+
+/* submit & log-in structure */ 
+#bottom-row {
+    display: flex;
+    flex-direction: column;
+}
+#bottom-row button {
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
