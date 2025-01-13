@@ -1,3 +1,12 @@
+/* css reset */
+* {
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
 /* page structure */
 body {
     display: flex;
@@ -18,17 +27,51 @@ body {
     flex: 1;
 }
 
+/* image structure */
+#images {
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+#background-photo-credit {
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    left: 50%; /* aligns the left edge point aligns with the center*/
+    transform: translateX(-50%); /* shift the left edge back by half its width */
+}
+
+#background-img {
+    position: relative;
+    display: block;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    font-size: 60px;
+    color: white;
+}
+#logo-img {
+    width: 15%; 
+}
+
 /* text structure */
 #top-row {
     display: flex;
     flex-direction: column;
-    align-items: start;
     justify-content: center;
 }
 
 /* inputs structure */
 .form-container {
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -39,14 +82,19 @@ form {
     display: flex;
 }
 fieldset {
+    width: 100%;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 label {
     display: block;
 }
-div {
+form > div {
     flex: 0 0 33.33%;
+}
+
+input {
+    width: 80%;
 }
 
 /* submit & log-in structure */ 
