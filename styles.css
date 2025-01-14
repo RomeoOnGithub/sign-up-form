@@ -11,8 +11,13 @@
     margin: 0;
 }
 
-a {
+#background-photo-credit a {
     color: white;
+}
+#bottom-row a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* page structure */
@@ -34,8 +39,10 @@ body {
 #top-row, #mid-row, #bottom-row {
    height: 33.33%;
 }
-
-.form-container, #text, #bottom-row {
+#top-row, #bottom-row {
+    background-color: #f9fafb;
+}
+.form-container, #text {
     width: 75%;
 }
 
@@ -87,6 +94,10 @@ legend, fieldset > div, #top-row, #bottom-row {
 #text {
     position: absolute;
     top: 50%;
+
+    font-size: 20px;
+    font-weight: 750;
+    overflow: auto;
 }
 
 /* inputs structure */
@@ -98,9 +109,6 @@ form {
     width: 100%;
     height: 100%;
 }
-form > div {
-    
-}
 fieldset {
     height: 95%; /* something is ruining spacing by 5 something.. */
     border: none;
@@ -109,20 +117,34 @@ fieldset {
 }
 legend {
     position: absolute;
-    top: 15px;
+    top: 20px;
+    font-size: larger;
+    font-weight: bold ;
 }
 .form-container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 40px;
+    padding-top: 50px;
+    gap: 20px;
 }
 label {
     display: block;
     margin-top: 10px;
+    margin-bottom: 2.5px;
+
+    font-weight: 500;
 }
 input {
     width: 80%;
-    padding: 5px;
+    padding: 7px;
+    border: thin solid #E5E7EB;
+    border-radius: 4px;
+}
+input:focus {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+input[type="password"]:invalid {
+    border-color: red;
 }
 
 /* submit & log-in structure */ 
@@ -130,9 +152,13 @@ input {
     padding-top: 30px;
 }
 #bottom-row button {
-    width: 150px;
-    height: 35px;
+    width: 175px;
+    height: 40px;
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
+
+    background-color: #596D48;
+    color: white;
+    font-weight: bold;
 }
